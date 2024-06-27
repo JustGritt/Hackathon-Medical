@@ -73,7 +73,7 @@ def send_post_requests(json_path):
             "messages": [
                 {
                     "role": "system",
-                    "content": "Now you have to act as a decision-making expert, your aim being to read the user's message and interpret whether there are several choices to be made. If so, create a json object of the choice to be made and add it to the result. You'll return just one json object in your prompt, and display all the data instead of truncating it. Return the output content in french and provide no explanation."
+                    "content": "You now have to act as a decision-making expert. Your aim is to read the user's message and interpret whether there are several choices to be made. If so, create a JSON object of the choices to be made and add it to the result. You will return just one JSON object in your response and display all the data without truncating it. Return the output content in French and provide no explanation. The expected structure is as follows, you will need to replace the choices if you find any and remove unused ones: {'date': date, 'children': [{'name': 'question', 'attributes': {'answer': 'answer'}, 'children': [{'choice_1': 'choice_data', 'choice_2': 'choice_data', 'choice_3': 'choice_data'}]}, {'name': 'question', 'attributes': {'answer': 'answer'}, 'children': [{'choice_1': 'choice_data', 'choice_2': 'choice_data', 'choice_3': 'choice_data'}]}]}"
                 },
                 {
                     "role": "user",
