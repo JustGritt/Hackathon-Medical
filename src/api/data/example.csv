@@ -1,0 +1,33 @@
+Date,Menu,Heure / condition,Titre,Libelle,Alerte,Action,Entite à enregistrer,,Nb caracteres,Nb SMS,Nb SMS entier,,,,,
+J-2,"Rappel/empêchement",10:00,"Rappel","Hopital xxxxxxxxxxxx : votre operation est prevue le JJ/MM/AA. Nous vous enverrons l'heure de convocation la veille vers HH.
+Un accompagnant est obligatoire pour votre sortie et la 1re nuit post-operatoire.
+Si vous avez un empechement ou un probleme de sante, repondez ALERTE","Alerte, autre reponses",,"ALERTE, reponse inattendue",,275,"  1,80   ","  2,00   ",,,,,
+,,,,,,,,,,,,,,,,
+J-1,"Horaires/
+Consignes",16:00,Heure,"Hopital xxxxxxxxxxxx : Nous vous attendons à l'unite de chirurgie ambulatoire du batiment YYYY, Ze etage le JJ/MM/AA à hh:mm Un accompagnant est obligatoire pour votre sortie et la 1re nuit post-operatoire.
+Si vous avez un empechement ou un probleme de sante, repondez ALERTE","Alerte, autre reponses",,"reponse innattendue, non remis, alerte",,275,"  1,80   ","  2,00   ",,,,,
+J-1,"Horaires/
+Consignes",16:02,Jeûne,"Ne pas manger, ne pas fumer, ne pas boire à partir de hh:mm. Sont seuls autorises l'eau, le cafe ou le the sucre sans lait jusqu'à hh:mm",,,,,136,"  0,85   ","  1,00   ",,,,,
+J-1,"Horaires/
+Consignes",16:02,Hygiene,"Prenez une douche la veille et le matin de l'intervention. Ne mettez ni bijoux, ni piercing, ni vernis à ongles, ni maquillage",,,,,126,"  0,79   ","  1,00   ",,,,,
+J-1,"Horaires/
+Consignes",16:02,Documents,Apportez vos radios et examens. N'oubliez pas le consentement eclaire signe ou la fiche d'information. Prenez vos medicaments selon les consignes recues,,,,,152,"  0,95   ","  1,00   ",,,,,
+,,,,,,,,,,,,,,,,
+J+1,Suivi,10:00,TVB,"Hopital xxxxxxxx : Suite à votre intervention, si tout va bien repondez TVB, sinon repondez AID","TVB Mais
+","TVB-> coordonnees
+AID-> Complications et Douleur 1
+Non Reponse (3 H)-> Relance","TVB, AID, TVB mais, autre reponse",,95,"  0,59   ","  1,00   ",,2,"1,5",,
+J+1,Suivi,Reponse TVB à TVB ou à Relance,Coordonnees,Merci de votre reponse. Pour toute question ou probleme vous pouvez nous appeler au 00 00 00 00 00 de hh:mm à hh:mm,,,,,115,"  0,72   ","  1,00   ",,8,2,,
+J+1,Suivi,Non reponse (03 H) à TVB,Relance,"Vous n'avez pas repondu, si tout va bien repondez TVB, sinon repondez AID","TVB Mais
+Non reponse (1H), non remis, ","TVB-> coordonnees
+AID-> Douleur et Complications","TVB, AID, TVB mais, autre reponse, NR, non remis",,73,"  0,46   ","  1,00   ",,,,,
+J+1,Suivi,AID à TVB ou à Relance,Complications,"En cas de nausees ou de vomissements, repondez NVO. Si vous avez un saignement important, repondez SNG. Si vous avez un autre probleme medical, repondez AUT","NVO, SNG, AUT, alerte inattendue
+Non Reponse (2H)",>3   -> douleur 2 ,"NVO, SNG, AUT, alerte inattendue, TVB",,156,"  0,98   ","  1,00   ",,,,,
+J+1,Suivi,AID à TVB ou à Relance,Douleur 1,Evaluez votre douleur sur une echelle de 0 à 10 (0 : pas de douleur ; 10 : douleur insupportable),,,,,97,"  0,61   ","  1,00   ",,,2,"0,7","1,4"
+J+1 ,Suivi,Reponse à douleur1 : >3,Douleur 2,"Si vous avez pris votre traitement anti-douleur repondez PRIS, sinon prenez-le maintenant et renvoyez une evaluation de votre douleur dans 45 min","PRIS, >3,
+NVO, SNG, AUT, alerte inattendue",Non Reponse (1H)-> douleur 3,"Valeur douleur entre 0 et 10, PRIS",,145,"  0,91   ","  1,00   ",,,7,"0,3","2,1"
+J+1 ,Suivi,Non Reponse (1H° à douleur 2,Douleur 3,"Vous n'avez pas repondu au dernier message, evaluez maintenant votre douleur sur une echelle de 0 à 10 (0 : pas de douleur ; 10 : douleur insupportable)",">3,
+Non Reponse (30min)",,"Valeur douleur entre 0 et 10 , PRIS",,152,"  0,95   ","  1,00   ",,,,,"0,21"
+,,,,,,,,,,,,,,,,
+J+1 ,Suivi,18:00,Satisfaction,Hopital xxxxxxxx : Evaluez votre passage au ************ sur une echelle de 0 à 10 (0 : pas du tout satisfait / 10 : extrêmement satisfait),,,Valeur satisfaction entre 0 et 10 ,,139,"  0,87   ","  1,00   ",,,,,
+,,,,,,,,,,,"  15,00   ",,,,,

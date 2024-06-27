@@ -1,0 +1,177 @@
+{
+    "J+1": [
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "10:00",
+            "Titre": "TVB",
+            "Libelle": "Hopital xxxxxxxx : Suite à votre intervention, si tout va bien repondez TVB, sinon repondez AID",
+            "Alerte": "TVB Mais\r\n",
+            "Action": "TVB-> coordonnees\r\nAID-> Complications et Douleur 1\r\nNon Reponse (3 H)-> Relance",
+            "Entite à enregistrer": "TVB, AID, TVB mais, autre reponse",
+            "Nb caracteres": 95.0,
+            "Nb SMS": "  0,59   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "Reponse TVB à TVB ou à Relance",
+            "Titre": "Coordonnees",
+            "Libelle": "Merci de votre reponse. Pour toute question ou probleme vous pouvez nous appeler au 00 00 00 00 00 de hh:mm à hh:mm",
+            "Alerte": "",
+            "Action": "",
+            "Entite à enregistrer": "",
+            "Nb caracteres": 115.0,
+            "Nb SMS": "  0,72   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "Non reponse (03 H) à TVB",
+            "Titre": "Relance",
+            "Libelle": "Vous n'avez pas repondu, si tout va bien repondez TVB, sinon repondez AID",
+            "Alerte": "TVB Mais\r\nNon reponse (1H), non remis, ",
+            "Action": "TVB-> coordonnees\r\nAID-> Douleur et Complications",
+            "Entite à enregistrer": "TVB, AID, TVB mais, autre reponse, NR, non remis",
+            "Nb caracteres": 73.0,
+            "Nb SMS": "  0,46   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "AID à TVB ou à Relance",
+            "Titre": "Complications",
+            "Libelle": "En cas de nausees ou de vomissements, repondez NVO. Si vous avez un saignement important, repondez SNG. Si vous avez un autre probleme medical, repondez AUT",
+            "Alerte": "NVO, SNG, AUT, alerte inattendue\r\nNon Reponse (2H)",
+            "Action": ">3   -> douleur 2 ",
+            "Entite à enregistrer": "NVO, SNG, AUT, alerte inattendue, TVB",
+            "Nb caracteres": 156.0,
+            "Nb SMS": "  0,98   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "AID à TVB ou à Relance",
+            "Titre": "Douleur 1",
+            "Libelle": "Evaluez votre douleur sur une echelle de 0 à 10 (0 : pas de douleur ; 10 : douleur insupportable)",
+            "Alerte": "",
+            "Action": "",
+            "Entite à enregistrer": "",
+            "Nb caracteres": 97.0,
+            "Nb SMS": "  0,61   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "Reponse à douleur1 : >3",
+            "Titre": "Douleur 2",
+            "Libelle": "Si vous avez pris votre traitement anti-douleur repondez PRIS, sinon prenez-le maintenant et renvoyez une evaluation de votre douleur dans 45 min",
+            "Alerte": "PRIS, >3,\r\nNVO, SNG, AUT, alerte inattendue",
+            "Action": "Non Reponse (1H)-> douleur 3",
+            "Entite à enregistrer": "Valeur douleur entre 0 et 10, PRIS",
+            "Nb caracteres": 145.0,
+            "Nb SMS": "  0,91   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "Non Reponse (1H° à douleur 2",
+            "Titre": "Douleur 3",
+            "Libelle": "Vous n'avez pas repondu au dernier message, evaluez maintenant votre douleur sur une echelle de 0 à 10 (0 : pas de douleur ; 10 : douleur insupportable)",
+            "Alerte": ">3,\r\nNon Reponse (30min)",
+            "Action": "",
+            "Entite à enregistrer": "Valeur douleur entre 0 et 10 , PRIS",
+            "Nb caracteres": 152.0,
+            "Nb SMS": "  0,95   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J+1",
+            "Menu": "Suivi",
+            "Heure / condition": "18:00",
+            "Titre": "Satisfaction",
+            "Libelle": "Hopital xxxxxxxx : Evaluez votre passage au ************ sur une echelle de 0 à 10 (0 : pas du tout satisfait / 10 : extrêmement satisfait)",
+            "Alerte": "",
+            "Action": "",
+            "Entite à enregistrer": "Valeur satisfaction entre 0 et 10 ",
+            "Nb caracteres": 139.0,
+            "Nb SMS": "  0,87   ",
+            "Nb SMS entier": "  1,00   "
+        }
+    ],
+    "J-1": [
+        {
+            "Date": "J-1",
+            "Menu": "Horaires/\r\nConsignes",
+            "Heure / condition": "16:00",
+            "Titre": "Heure",
+            "Libelle": "Hopital xxxxxxxxxxxx : Nous vous attendons à l'unite de chirurgie ambulatoire du batiment YYYY, Ze etage le JJ/MM/AA à hh:mm Un accompagnant est obligatoire pour votre sortie et la 1re nuit post-operatoire.\r\nSi vous avez un empechement ou un probleme de sante, repondez ALERTE",
+            "Alerte": "Alerte, autre reponses",
+            "Action": "",
+            "Entite à enregistrer": "reponse innattendue, non remis, alerte",
+            "Nb caracteres": 275.0,
+            "Nb SMS": "  1,80   ",
+            "Nb SMS entier": "  2,00   "
+        },
+        {
+            "Date": "J-1",
+            "Menu": "Horaires/\r\nConsignes",
+            "Heure / condition": "16:02",
+            "Titre": "Jeûne",
+            "Libelle": "Ne pas manger, ne pas fumer, ne pas boire à partir de hh:mm. Sont seuls autorises l'eau, le cafe ou le the sucre sans lait jusqu'à hh:mm",
+            "Alerte": "",
+            "Action": "",
+            "Entite à enregistrer": "",
+            "Nb caracteres": 136.0,
+            "Nb SMS": "  0,85   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J-1",
+            "Menu": "Horaires/\r\nConsignes",
+            "Heure / condition": "16:02",
+            "Titre": "Hygiene",
+            "Libelle": "Prenez une douche la veille et le matin de l'intervention. Ne mettez ni bijoux, ni piercing, ni vernis à ongles, ni maquillage",
+            "Alerte": "",
+            "Action": "",
+            "Entite à enregistrer": "",
+            "Nb caracteres": 126.0,
+            "Nb SMS": "  0,79   ",
+            "Nb SMS entier": "  1,00   "
+        },
+        {
+            "Date": "J-1",
+            "Menu": "Horaires/\r\nConsignes",
+            "Heure / condition": "16:02",
+            "Titre": "Documents",
+            "Libelle": "Apportez vos radios et examens. N'oubliez pas le consentement eclaire signe ou la fiche d'information. Prenez vos medicaments selon les consignes recues",
+            "Alerte": "",
+            "Action": "",
+            "Entite à enregistrer": "",
+            "Nb caracteres": 152.0,
+            "Nb SMS": "  0,95   ",
+            "Nb SMS entier": "  1,00   "
+        }
+    ],
+    "J-2": [
+        {
+            "Date": "J-2",
+            "Menu": "Rappel/empêchement",
+            "Heure / condition": "10:00",
+            "Titre": "Rappel",
+            "Libelle": "Hopital xxxxxxxxxxxx : votre operation est prevue le JJ/MM/AA. Nous vous enverrons l'heure de convocation la veille vers HH.\r\nUn accompagnant est obligatoire pour votre sortie et la 1re nuit post-operatoire.\r\nSi vous avez un empechement ou un probleme de sante, repondez ALERTE",
+            "Alerte": "Alerte, autre reponses",
+            "Action": "",
+            "Entite à enregistrer": "ALERTE, reponse inattendue",
+            "Nb caracteres": 275.0,
+            "Nb SMS": "  1,80   ",
+            "Nb SMS entier": "  2,00   "
+        }
+    ]
+}
